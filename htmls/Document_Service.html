@@ -19,7 +19,7 @@
         </header><br><br>
         <main>
             <section>
-                <table border="1">
+                <table border="1" width="200">
                     <thead>
                         <tr>
                             <th>Available Documents</th>
@@ -41,12 +41,15 @@
                     </tbody>
                 </table>
                 <div id="Request_Documents">
-                    <form><label><br>Student Name:<input type="text" placeholder="Enter Name"></label><br><br>
-                        <label><br>Student ID:<input type="text" placeholder="Enter ID"></label><br><br>
+                    <form onsubmit="alert('Your request has been submitted, wait for our response.'); location.reload()">
+                        <label><br>Student Name:<input type="text" 
+                        placeholder="Enter Name" required></label><br><br>
+                        <label><br>Student ID:<input type="text" placeholder="Enter ID" maxlength="7" required></label><br><br>
                         <label>
                             <br>
                             Document Type:
-                            <select>
+                            <select required>
+                                <option value="">Select Document Type</option>
                                 <option value="coe">Certificate of Enrollmet</option>
                                 <option value="tor">Transcript of Record</option>
                                 <option value="sc">Student Clearance</option>
@@ -56,9 +59,9 @@
                         <label>
                             Purpose:
                             <br>
-                            <textarea name="Purpose" id="purpose" placeholder="For what reason?"></textarea>
+                            <textarea name="Purpose" id="purpose" placeholder="For what reason?" required></textarea>
                         </label>
-                        <br><button type="text">Submit</button>
+                        <br><button type="submit">Submit</button>
                     </form>
                 </div>
             </section>
