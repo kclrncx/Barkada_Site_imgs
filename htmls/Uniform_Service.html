@@ -41,14 +41,15 @@
                     </tbody>
                 </table>
                 <div id="Order_Uni">
-                    <form><label><br>Student Name:<input type="text" placeholder="Enter Name"></label><br><br>
-                        <label><br>Student ID:<input type="text" placeholder="Enter ID"></label><br><br>
+                    <form onsubmit="alert('Your request has been submitted, wait for our response.'); location.reload()"><label><br>Student Name:<input type="text" placeholder="Enter Name" required></label><br><br>
+                        <label><br>Student ID:<input type="text" placeholder="Enter ID" maxlength="7" required></label><br><br>
 
                         <!--Wala ko kabalo sa exact price so naghimo^2 nalng ko akoa.-->
                         <label>
                             <br>
                             Order Type:
-                            <select>
+                            <select required>
+                                <option value="">Select Item</option>
                                 <option value="coe">Uniform(Set A) - Php 500.00</option>
                                 <option value="tor">Uniform(Set B) - Php 500.00</option>
                                 <option value="sc">Lanyard - Php 100.00</option>
@@ -63,7 +64,9 @@
                         <label>
                             <br>
                             Size:
-                            <select>
+                            <select required>
+                                <option value="">Select Sizes</option>
+                                <option value="none">None(for lanyards)</option>
                                 <option value="size_XS">XS</option>
                                 <option value="size_S">S</option>
                                 <option value="size_M">M</option>
