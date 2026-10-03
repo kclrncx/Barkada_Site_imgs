@@ -24,27 +24,28 @@
 
         <main id="login">
             <h1>
-                <form>
+                <form action="https://kclrncx.github.io/Barkada_Site_imgs/htmls/dashboard.html">
                     <label>
                         <br>
                         Student Name:
-                        <input type="text" placeholder="Enter Fullname">
+                        <input type="text" placeholder="Enter Fullname" required>
                     </label>
                     <br><br>
                     <label>
                         <br>
                         Student Birthdate:
-                        <input type="date" placeholder="Enter Birtdate">
+                        <input type="date" placeholder="Enter Birtdate" required>
                     </label>
                     <br><br>
                     <label>
                         <br>
                         Student ID:
-                        <input type="text" placeholder="Enter ID">
+                        <input type="text" placeholder="Enter ID" maxlength="7" required>
                     </label>
                     <br><br>
                     <label>
-                        <select name="Program">
+                        <select name="Program" placeholder="Program" required>
+                            <option value="">Select Program</option>
                             <option value="BSFI">Bachelor of Science in Fisheries</option>
                             <option value="CoEd">College of Education</option>
                             <option value="BSHM">Bachelor of Science in Hospitality Management</option>
@@ -54,7 +55,8 @@
                         </select>
                     </label>
                     <label>
-                        <select name="year_section">
+                        <select name="year_section" placeholder="Year & Section" required>
+                            <option value="">Select Year & Section</option>
                             <option value="1A">1A</option>
                             <option value="1B">1B</option>
                             <option value="1C">1C</option>
@@ -81,7 +83,7 @@
                         </select>
                         <br><br>
 
-                        <a href="dashboard.html"><button type="button">Login</button></a>
+                        <button type="submit">Login</button>
 
                     </label>
                 </form>
